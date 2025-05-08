@@ -1,0 +1,5 @@
+com\mycompany\registrarvendas\RegistrarVendas.class
+com\mycompany\registrarvendas\Produto.class
+com\mycompany\registrarvendas\Venda.class
+com\mycompany\registrarvendas\Caixa.class
+com\mycompany\registrarvendas\ItemVenda.class

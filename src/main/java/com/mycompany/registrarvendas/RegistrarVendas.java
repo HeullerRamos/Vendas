@@ -41,6 +41,7 @@ public class RegistrarVendas {
 //        }
 
           Caixa caixa = new Caixa (1l,"Adalberto");
+        System.out.println("foi?");
     }
          
     
