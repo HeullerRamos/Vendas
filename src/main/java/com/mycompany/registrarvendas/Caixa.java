@@ -39,7 +39,7 @@ public class Caixa {
     }
     public ArrayList<Venda> insereVendas(Venda venda){
         vendas.add(venda);
-        
+        venda.setStatus(true);
         return vendas;
     }
      

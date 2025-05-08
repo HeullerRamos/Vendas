@@ -14,6 +14,10 @@ public class VendaControler {
         return venda;
     }
 
+    public void finalizaVenda(Caixa caixa){
+        caixa.insereVendas(venda);
+        venda = new Venda();
+    }
     public Venda getVenda() {
         return venda;
     }
