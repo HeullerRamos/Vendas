@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class Repositorio {
 
-    private ArrayList<Produto> produtos;
+    private ArrayList<Produto> produtos = new ArrayList<>();
 
-    private ArrayList<Venda> vendas;
+    private ArrayList<Venda> vendas = new ArrayList<>();
 
-    private ArrayList<Caixa> caixas;
+    private ArrayList<Caixa> caixas  = new ArrayList<>();
 
     private static Repositorio instancia;
 
@@ -20,6 +20,7 @@ public class Repositorio {
     }
 
     public void adicicionarProduto(Produto produto) {
+
         produtos.add(produto);
     }
 

@@ -19,20 +19,15 @@ public class ItemVenda {
     
     private Produto produto;
     
-//public ArrayList<Produto> produtos = new ArrayList<>();
-    
-    
-//    public ArrayList<Produto> adicionarItens (Produto produto){
-//        
-//        produtos.add(produto);
-//        quantidade = produtos.size();
-//        return produtos;
-//    }
+
 
     public ItemVenda(int quantidade, Produto produto) {
         this.quantidade = quantidade;
         this.produto = produto;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "ItemVenda{" +"Nome= " + produto.getNome() + "quantidade=" + quantidade;
+    }
 }

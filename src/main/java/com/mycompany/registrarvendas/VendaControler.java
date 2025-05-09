@@ -1,9 +1,11 @@
 package com.mycompany.registrarvendas;
 
+import java.util.ArrayList;
+
 public class VendaControler {
     private Venda venda;
     private Repositorio repositorio = Repositorio.getInstancia();
-
+    private ArrayList<Venda> vendas = new ArrayList<>();
     public VendaControler() {
         venda = new Venda();
     }
@@ -17,10 +19,14 @@ public class VendaControler {
 
     public void finalizaVenda(Caixa caixa){
         caixa.insereVendas(venda);
+        vendas.add(venda);
         venda = new Venda();
     }
     public Venda getVenda() {
         return venda;
+    }
+    public void listarItensVendas(Venda venda) {
+        for (ItemVenda item : venda.getItens()) {}
     }
 
     public Venda adicionaProduto(String nome, int quantidade){
@@ -30,5 +36,9 @@ public class VendaControler {
         ItemVenda itemVenda = new ItemVenda(quantidade,repositorio.buscarPorNome(nome));
         return adicionarItensVenda(itemVenda);
 
+    }
+
+    public void listaDeCompras(Caixa caixa){
+        caixa.listarItensDasVendas(caixa.getVendas());
     }
 }
